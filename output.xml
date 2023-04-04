@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0 (Python 3.11.0 on win32)" generated="20230331 11:59:46.459" rpa="false" schemaversion="3">
+<suite id="s1" name="Index" source="c:\Users\AG\Desktop\Timebutler2\testcase\index.robot">
+<test id="s1-t1" name="Open the Browser" line="8">
+<kw name="Hape browserin" library="Keywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230331 11:59:46.661" level="INFO">Opening browser 'chrome' to base url 'https://timebutler.de'.</msg>
+<status status="PASS" starttime="20230331 11:59:46.660" endtime="20230331 11:59:48.326"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230331 11:59:48.326" endtime="20230331 11:59:48.480"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230331 11:59:49.481" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230331 11:59:48.480" endtime="20230331 11:59:49.482"/>
+</kw>
+<status status="PASS" starttime="20230331 11:59:46.659" endtime="20230331 11:59:49.484"/>
+</kw>
+<status status="PASS" starttime="20230331 11:59:46.659" endtime="20230331 11:59:49.487"/>
+</test>
+<test id="s1-t2" name="Enter LoginButton" line="11">
+<kw name="Click the LoginButton" library="Keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${loginLocator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230331 11:59:49.500" level="INFO">Clicking element 'xpath://a[@href='/login/']'.</msg>
+<status status="PASS" starttime="20230331 11:59:49.497" endtime="20230331 11:59:49.788"/>
+</kw>
+<status status="PASS" starttime="20230331 11:59:49.495" endtime="20230331 11:59:49.789"/>
+</kw>
+<status status="PASS" starttime="20230331 11:59:49.492" endtime="20230331 11:59:49.789"/>
+</test>
+<test id="s1-t3" name="Enter informations" line="15">
+<kw name="Enter Info" library="Keywords">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@id='login']</arg>
+<arg>dijamant@imbus-peja.de</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230331 11:59:49.792" level="INFO">Typing text 'dijamant@imbus-peja.de' into text field '//input[@id='login']'.</msg>
+<status status="PASS" starttime="20230331 11:59:49.792" endtime="20230331 11:59:49.898"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${passLocator}</arg>
+<arg>Asdf1234.,</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230331 11:59:49.900" level="INFO">Typing password into text field 'xpath://input[@id='passwort']'.</msg>
+<msg timestamp="20230331 11:59:49.953" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230331 11:59:50.005" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230331 11:59:49.899" endtime="20230331 11:59:50.006"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${login2Locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230331 11:59:50.006" level="INFO">Clicking element 'xpath://*[@id='loginform']/div[4]/button'.</msg>
+<status status="PASS" starttime="20230331 11:59:50.006" endtime="20230331 11:59:50.530"/>
+</kw>
+<status status="PASS" starttime="20230331 11:59:49.792" endtime="20230331 11:59:50.530"/>
+</kw>
+<status status="PASS" starttime="20230331 11:59:49.791" endtime="20230331 11:59:50.531"/>
+</test>
+<test id="s1-t4" name="Tracking Hours" line="20">
+<kw name="Tracking in Calendar View" library="Keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[@class='navbar-right']/ul[@class="nav navbar-nav"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230331 11:59:50.537" level="INFO">Clicking element '//div[@class='navbar-right']/ul[@class="nav navbar-nav"]'.</msg>
+<status status="PASS" starttime="20230331 11:59:50.535" endtime="20230331 11:59:50.614"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@href="/do?ha=lang&amp;ac=1&amp;loc=en_UK"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230331 11:59:50.615" level="INFO">Clicking element '//*[@href="/do?ha=lang&amp;ac=1&amp;loc=en_UK"]'.</msg>
+<status status="PASS" starttime="20230331 11:59:50.615" endtime="20230331 11:59:50.796"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TTCalendarView}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230331 11:59:50.797" level="INFO">Clicking element 'xpath://*[@id='navareamydata']/ul/li[14]/a'.</msg>
+<status status="PASS" starttime="20230331 11:59:50.796" endtime="20230331 11:59:51.225"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:td[class*='ic4n']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230331 11:59:51.226" level="INFO">Clicking element 'css:td[class*='ic4n']'.</msg>
+<msg timestamp="20230331 11:59:51.480" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-20.png"&gt;&lt;img src="selenium-screenshot-20.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230331 11:59:51.480" level="FAIL">Element with locator 'css:td[class*='ic4n']' not found.</msg>
+<status status="FAIL" starttime="20230331 11:59:51.225" endtime="20230331 11:59:51.486"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[@class='popover-content']//a[@class='btn btn-primary btn-xs'][normalize-space()='New entry']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230331 11:59:51.486" endtime="20230331 11:59:51.486"/>
+</kw>
+<kw name="Press Key" library="SeleniumLibrary">
+<arg>//*[@id="projektid"]</arg>
+<arg>No Project</arg>
+<doc>*DEPRECATED in SeleniumLibrary 4.0.* use `Press Keys` instead.</doc>
+<msg timestamp="20230331 11:59:51.487" level="WARN">Keyword 'SeleniumLibrary.Press Key' is deprecated. use `Press Keys` instead.</msg>
+<status status="NOT RUN" starttime="20230331 11:59:51.486" endtime="20230331 11:59:51.488"/>
+</kw>
+<kw name="Press Key" library="SeleniumLibrary">
+<arg>//*[@id="dauer"]</arg>
+<arg>8</arg>
+<doc>*DEPRECATED in SeleniumLibrary 4.0.* use `Press Keys` instead.</doc>
+<msg timestamp="20230331 11:59:51.489" level="WARN">Keyword 'SeleniumLibrary.Press Key' is deprecated. use `Press Keys` instead.</msg>
+<status status="NOT RUN" starttime="20230331 11:59:51.488" endtime="20230331 11:59:51.490"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="newEntrySubmitBtn"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230331 11:59:51.490" endtime="20230331 11:59:51.491"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230331 11:59:51.491" endtime="20230331 11:59:51.491"/>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>Tracking in Calendar View</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="NOT RUN" starttime="20230331 11:59:51.491" endtime="20230331 11:59:51.492"/>
+</kw>
+<status status="FAIL" starttime="20230331 11:59:50.535" endtime="20230331 11:59:51.492"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230331 11:59:51.492" endtime="20230331 11:59:51.492"/>
+</kw>
+<status status="FAIL" starttime="20230331 11:59:50.534" endtime="20230331 11:59:51.493">Element with locator 'css:td[class*='ic4n']' not found.</status>
+</test>
+<status status="FAIL" starttime="20230331 11:59:46.464" endtime="20230331 11:59:51.495"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="1" skip="0" id="s1" name="Index">Index</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230331 11:59:51.487" level="WARN">Keyword 'SeleniumLibrary.Press Key' is deprecated. use `Press Keys` instead.</msg>
+<msg timestamp="20230331 11:59:51.489" level="WARN">Keyword 'SeleniumLibrary.Press Key' is deprecated. use `Press Keys` instead.</msg>
+</errors>
+</robot>
